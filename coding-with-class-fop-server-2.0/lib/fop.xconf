@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<fop version="1.0">
+
+  <!-- Base URL for resolving relative URLs -->
+  <base>.</base>
+  
+  <renderers>
+    <renderer mime="application/pdf">
+      <version>1.7</version>
+        <!-- Versions 1.4, 1.5, 1.6 and 1.7 are accepted, all other values are invalid -->
+      <fonts>
+        <auto-detect /> 
+      </fonts>
+    </renderer>
+
+    <renderer mime="application/x-afp">
+      <images mode="b+w" bits-per-pixel="8"/>
+      <renderer-resolution>240</renderer-resolution>
+      <resource-group-file>resources.afp</resource-group-file>
+
+      <fonts>
+        <auto-detect /> 
+      </fonts>
+      
+    </renderer>
+
+    <renderer mime="application/postscript">
+      <!-- This option forces the PS renderer to rotate landscape pages -->
+      <!--auto-rotate-landscape>true</auto-rotate-landscape-->
+      
+      <!-- This option lets you specify additional options on an XML handler -->
+      <!--xml-handler namespace="http://www.w3.org/2000/svg">
+        <stroke-text>false</stroke-text>
+      </xml-handler-->
+      <fonts>
+        <auto-detect /> 
+      </fonts>
+    </renderer>
+
+    <renderer mime="application/vnd.hp-PCL">
+      <fonts>
+        <auto-detect /> 
+      </fonts>
+    </renderer>
+
+    <!-- MIF does not have a renderer
+    <renderer mime="application/vnd.mif">
+    </renderer>
+    -->
+
+    <renderer mime="image/svg+xml">
+      <format type="paginated"/>
+      <link value="true"/>
+      <strokeText value="false"/>
+    </renderer>
+
+    <renderer mime="application/awt">
+    </renderer>
+
+    <renderer mime="image/png">
+      <transparent-page-background>true</transparent-page-background>
+      <fonts>
+        <auto-detect /> 
+      </fonts>
+    </renderer>
+
+    <renderer mime="image/tiff">
+      <!--transparent-page-background>true</transparent-page-background-->
+      <!--compression>CCITT T.6</compression-->
+      <fonts>
+        <auto-detect /> 
+      </fonts>
+    </renderer>
+
+    <renderer mime="text/xml">
+    </renderer>
+
+    <!-- RTF does not have a renderer
+    <renderer mime="text/rtf">
+    </renderer>
+    -->
+
+  </renderers>
+
+</fop>
+
